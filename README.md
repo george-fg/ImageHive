@@ -12,18 +12,23 @@ We are building a basic social network for our 2 day project. It is going to be 
 
 ## Pages:
 Login Page
+
 Individual User Page 
+
 Image/Description Posting Page
 
 ## Databases:
 SQLite3 Users table
+
 SQlite3 Posts table
 
 # Stretch Goals
 
 ## Pages:
 Feed Page displaying other peoples posts
+
 A registration page for a new user
+
 Decent Styling (not shit)
 
 ## Databases:
