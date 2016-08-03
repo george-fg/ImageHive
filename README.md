@@ -10,26 +10,26 @@ We are building a basic social network for our 2 day project. It is going to be 
 
 # MVP
 
-# Pages:
+## Pages:
 Login Page
 Individual User Page 
 Image/Description Posting Page
 
-# Databases:
+## Databases:
 SQLite3 Users table
 SQlite3 Posts table
 
 # Stretch Goals
 
-# Pages:
+## Pages:
 Feed Page displaying other peoples posts
 A registration page for a new user
 Decent Styling (not shit)
 
-# Databases:
+## Databases:
 Joins table to connect other users to eachother.
 
-# Misc:
+## Misc:
 Make a logo
 
 
