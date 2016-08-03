@@ -32,7 +32,7 @@ A registration page for a new user
 Decent Styling (not shit)
 
 ## Databases:
-Joins table to connect other users to eachother.
+Joins table to connect other users to each other.
 
 ## Misc:
 Make a logo
