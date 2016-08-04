@@ -1,5 +1,5 @@
 body {
-  background-color: #8080ff;
+  background-color:  #ffff4d;
 }
 
 
@@ -17,10 +17,10 @@ body {
 .flex-login {
   border-radius: 10px;
   box-shadow: 5px 5px 5px #333333;
-  background: #ccccff;
+  background: #ffffcc;
   width: 300px;
   margin-top: 10px;
-  color: #4d4dff
+  color: black
   font-weight: bold;
   font-size: 3em;
   text-align: center;
@@ -29,11 +29,11 @@ body {
 .flex-posts {
   border-radius: 10px;
   box-shadow: 5px 5px 5px #333333;
-  background: #ccccff;
+  background: #ffffcc;
   padding: 5px;
   width: 500px;
   margin-top: 10px;
-  color: #4d4dff
+  color: black
   font-weight: bold;
   font-size: 3em;
   text-align: center;
