@@ -2,7 +2,7 @@
 <h1>{{title}}</h1>
 <pre>Welcome, {{username}}!</pre>
 <a type="button" name="newpost" href="/post/{{username}}">create new post</a>
-<a type="button" name="feed" href="/users/{{username}}/feed">view your feed</a>
+<a type="button" name="newpost" href="/users/{{username}}">back to your wall</a>
 {{#each posts}}
   <ul class="flex-posts">
     <li>#{{this.id}}</li>
