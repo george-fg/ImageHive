@@ -7,8 +7,8 @@ router.get('/:username', function(req, res, next) {
   res.render('show_user');
 });
 
-router.post('/:username', function (req, res) {
-  var username = req.params.username
+router.post('/', function (req, res) {
+  var username = req.body.name
   db.getUser(username)
     .then(function (user) {
       if (!user[0]) {
@@ -17,7 +17,7 @@ router.post('/:username', function (req, res) {
       }
     })
     .catch(db.logError);
-    res.redirect('/')
+    res.redirect('/users/' + username)
 });
 
 

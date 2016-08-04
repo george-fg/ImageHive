@@ -15,5 +15,4 @@ router.post('/:username', function (req, res) {
     res.redirect('/users/' + username)
 });
 
-
 module.exports = router;
