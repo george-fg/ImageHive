@@ -4,8 +4,8 @@ var db = require('../data/dbConfig');
 
 /* GET users listing. */
 router.get('/:username', function(req, res, next) {
-  router.locals.username = req.params.username
-  console.log(router.locals);
+  res.locals.username = req.params.username
+  console.log("getting the result from locals ", res.locals);
   res.render('show_user', {username: req.params.username});
 });
 
