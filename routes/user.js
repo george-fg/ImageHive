@@ -18,8 +18,9 @@ router.post('/', function (req, res) {
         console.log('user alread exists');
       }
       else {
-        // db.insertUser(newUser)
-        console.log('user does not exists');
+        db.insertUser(newUser)
+          .catch(db.logError);
+          // console.log('user does not exists');
       }
     })
     .catch(db.logError);
