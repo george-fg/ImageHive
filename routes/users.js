@@ -4,17 +4,30 @@ var db = require('../data/dbConfig');
 
 /* GET users listing. */
 router.get('/:username', function(req, res, next) {
-  // res.locals.username = req.params.username
-  // console.log("getting the result from locals ", res.locals);
   var posts
   db.getPosts()
   .then(function(data){
-    //console.log(data);
-    res.render('show_user', {username: req.params.username, posts: data.reverse()})
-  })
+    res.render('show_user', {username: req.params.username,
+      posts: data.filter
+      (function(post) {
+        return post.users_username.toLowerCase() == req.params.username.toLowerCase()
+      })
+      .reverse()
+    })
   .catch(db.logError)
-  //res.render('show_user', {username: req.params.username, posts: posts});
-});
+  })
+})
+
+router.get('/:username/feed', function(req, res, next) {
+  var posts
+  db.getPosts()
+  .then(function(data){
+    res.render('user_feed', {username: req.params.username,
+      posts: data.reverse()
+    })
+  .catch(db.logError)
+  })
+})
 
 router.post('/', function (req, res) {
   var username = req.body.name
