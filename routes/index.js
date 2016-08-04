@@ -21,4 +21,6 @@ router.get('/userpost', function(req, res, next) {
 //  res.render('user_post', { title: 'ImageHive!', id: 3, name: "Frank", img_url: "http://i.imgur.com/5a1slAa.png", caption: "Hey! its a train!" });
 
 
+
+
 module.exports = router;
