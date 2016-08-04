@@ -2,9 +2,10 @@
 <h1>{{title}}</h1>
 <pre>Welcome, {{username}}!</pre>
 <a type="button" name="newpost" href="/post/{{username}}">create new post</a>
+{{#each posts}}
   <ul class="flex-posts">
     <li>#{{id}}</li>
-    <li><b>{{users_username}}</b></li>
+    <li><b>{{usersusername}}</b></li>
     <li><img src={{imageUrl}} alt="{{username}}" style="width:300px;height:300px;"></li>
     <li>{{caption}}</li>
   </ul>

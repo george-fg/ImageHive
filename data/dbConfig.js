@@ -14,6 +14,10 @@ function insertPost(post) {
   return knex('posts').insert(post)
 }
 
+function getPosts() {
+  return knex('posts')
+}
+
 function logError(err) {
   console.error(err.message);
   res.status(500).send("Can't display cats!");
@@ -24,5 +28,6 @@ module.exports = {
   getUser: getUser,
   insertUser: insertUser,
   logError: logError,
-  insertPost: insertPost
+  insertPost: insertPost,
+  getPosts: getPosts
 };
