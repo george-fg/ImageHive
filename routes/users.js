@@ -9,11 +9,11 @@ router.get('/:username', function(req, res, next) {
   var posts
   db.getPosts()
   .then(function(data){
-    console.log(data);
-    posts = data
+    //console.log(data);
+    res.render('show_user', {username: req.params.username, posts: data})
   })
-  .catch(logError)
-  res.render('show_user', {username: req.params.username, posts: posts});
+  .catch(db.logError)
+  //res.render('show_user', {username: req.params.username, posts: posts});
 });
 
 router.post('/', function (req, res) {
