@@ -2,19 +2,17 @@ var knexConfig = require('../knexfile').development;
 var knex = require('knex')(knexConfig);
 
 
-function getUser(user) {
-  return knex('users').where('username', user.username);
+function getUser(username) {
+  return knex('users').where('username', username);
 }
 
-function insertUser(user) {
-  return knex('users').insert({username: user.username});
+function insertUser(username) {
+  return knex('users').insert({username: username});
 }
 
-// function getCatById(catId) {
-//   var id = catId.id;
-//   console.log(id);
-//   return knex('cats').where('id', id);
-// }
+function insertPost(post) {
+  return knex('posts').insert(post)
+}
 
 function logError(err) {
   console.error(err.message);
@@ -25,5 +23,6 @@ function logError(err) {
 module.exports = {
   getUser: getUser,
   insertUser: insertUser,
-  logError: logError
+  logError: logError,
+  insertPost: insertPost
 };
