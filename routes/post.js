@@ -3,6 +3,7 @@ var router = express.Router();
 var db = require('../data/dbConfig');
 
 /* GET users listing. */
+
 router.get('/:username', function(req, res, next) {
   res.render('post_form', {username: req.params.username});
 });

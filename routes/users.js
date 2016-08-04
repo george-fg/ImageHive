@@ -10,7 +10,7 @@ router.get('/:username', function(req, res, next) {
   db.getPosts()
   .then(function(data){
     //console.log(data);
-    res.render('show_user', {username: req.params.username, posts: data})
+    res.render('show_user', {username: req.params.username, posts: data.reverse()})
   })
   .catch(db.logError)
   //res.render('show_user', {username: req.params.username, posts: posts});
