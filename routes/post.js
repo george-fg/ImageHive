@@ -15,8 +15,9 @@ router.get('/:input', function(req, res, next) {
       res.render('user_post', post[0]);
     })
   }
-}
-);router.get('/edit/:id', function(req, res, next) {
+});
+
+router.get('/edit/:id', function(req, res, next) {
   var id = req.params.id
   db.getPostById(id)
     .then(function(post) {
@@ -31,11 +32,21 @@ router.post('/:id', function (req, res) {
     .then(function(posts) {
       postToEdit = posts[0]
       db.editPost(postToEdit, changesObj)
-      .catch(db.logError)
-      res.redirect('/post/' + postToEdit.id)
+      .catch(db.logError);
+      res.redirect('/post/' + postToEdit.id);
+  });
+});
+
+router.delete('/:input', function (req, res) {
+  var id = req.params.input;
+  db.deletePostById(id)
+    .then(function () {
+      return;
     })
     .catch(db.logError);
 });
+
+
 
 
 router.post('/', function (req, res) {
