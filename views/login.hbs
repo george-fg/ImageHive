@@ -1,5 +1,9 @@
 <div class="flex-container">
-  <h1>{{title}}</h1>
+  <ul class="navigation">
+    <li><a href="/users/{{username}}">Home</a></li>
+    <li><a href="/post/{{username}}">New Post</a></li>
+  </ul>
+  <img src="../images/Bee_Logo.png" width=auto height="300px">
   <p>Welcome to {{title}}</p>
   <form class="flex_item" id="new_user" action="/users" accept-charset="UTF-8" method="post">
 

@@ -1,7 +1,12 @@
 <div class="flex-container">
-<h1>{{title}}</h1>
+  <ul class="navigation">
+    <li><a href="/users/{{username}}">Home</a></li>
+    <li><a href="/post/{{username}}">New Post</a></li>
+    <li><a href="">something</a></li>
+    <li><a href="">something</a></li>
+  </ul>
+<img src="../images/Bee_Logo.png" width=auto height="300px">
 <pre>Welcome, {{username}}!</pre>
-<a type="button" name="newpost" href="/post/{{username}}">create new post</a>
 {{#each posts}}
   <ul class="flex-posts">
     <li>#{{this.id}}</li>
