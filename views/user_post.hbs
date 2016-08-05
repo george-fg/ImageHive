@@ -1,8 +1,8 @@
 <div class="flex-container">
 <h1>{{title}}</h1>
-<a type="button" name="newpost" href="/post/{{username}}">create new post</a>
+<a type="button" name="newpost" href="/">Back to Homepage</a>
   <ul class="flex-posts">
-    <li>#{{id}}</li>
+    <li><a href="/post/{{id}}">#{{id}}</a></li>
     <li><b>{{users_username}}</b></li>
     <li><img src='{{imgUrl}}' style="width:300px;height:300px;"></li>
     <li>{{caption}}</li>
