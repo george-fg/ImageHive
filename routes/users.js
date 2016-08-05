@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var db = require('../data/dbConfig');
+var app = require('../app')
 
 /* GET users listing. */
 router.get('/:username', function(req, res, next) {
@@ -14,8 +15,8 @@ router.get('/:username', function(req, res, next) {
       })
       .reverse()
     })
-  .catch(db.logError)
   })
+  .catch(db.logError)
 })
 
 router.get('/:username/feed', function(req, res, next) {
@@ -25,8 +26,8 @@ router.get('/:username/feed', function(req, res, next) {
     res.render('user_feed', {username: req.params.username,
       posts: data.reverse()
     })
-  .catch(db.logError)
   })
+  .catch(db.logError)
 })
 
 router.post('/', function (req, res) {
