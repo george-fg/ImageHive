@@ -5,14 +5,14 @@
   <li><a href="/">Log Out</a></li>
 </ul>
 <div class="flex-container">
-<img src="../images/Bee_Logo.png" width=auto height="300px">
-<pre>Welcome, {{username}}!</pre>
-{{#each posts}}
-  <ul class="flex-posts">
-    <li><a href="/post/{{this.id}}">#{{this.id}}</a></li>
-    <li><b>{{this.users_username}}</b></li>
-    <li><img src='{{this.imgUrl}}' style="width:300px;height:300px;"></li>
-    <li>{{this.caption}}</li>
-  </ul>
+  <a href="/"><img src="../images/Bee_Logo.png" width=auto height="300px"></a>
+  <pre>Welcome, {{username}}!</pre>
+  {{#each posts}}
+    <ul class="flex-posts">
+      <li><a href="/post/{{this.id}}">#{{this.id}}</a></li>
+      <li><b>{{this.users_username}}</b></li>
+      <li><img src='{{this.imgUrl}}' style="width:300px;height:300px;"></li>
+      <li>{{this.caption}}</li>
+    </ul>
   {{/each}}
 </div>
