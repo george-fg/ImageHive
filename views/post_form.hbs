@@ -1,10 +1,19 @@
+<ul class="navigation">
+  <li><a href="/users/{{username}}">Your Posts</a></li>
+  <li><a href="/post/{{username}}">New Post</a></li>
+  <li><a href="/users/{{username}}/feed">All Posts</a></li>
+  <li><a href="/">Log Out</a></li>
+</ul>
 <div class="flex-container">
-  <h1>{{title}}</h1>
-  <p>Give us an image!!!!</p>
-  <form class="flex-login" id="new_post" action="/post" accept-charset="UTF-8" method="post">
+  <img src="../images/Bee_Logo.png" width=auto height="300px">
+  <p></p>
+  <form class="flex-form" id="new_post" action="/post" accept-charset="UTF-8" method="post">
   <p>
-    <input type="text" name="username" id="cat_image" value={{username}} readonly/><br><br>
+    Post your image and caption:<br><br>
+    <input class="hidden" type="text" name="username" id="cat_image" value={{username}} readonly/><br><br>
+    Image:<br><br>
     <input placeholder="image url" type="text" name="image" id="cat_image" /><br><br>
+    Caption:<br><br>
     <textarea placeholder="caption" name="caption" id="image_caption">
     </textarea><br><br>
     <input type="submit" name="commit" value="Create New Post" />

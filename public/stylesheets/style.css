@@ -2,6 +2,43 @@ body {
   background-color:  #ffff4d;
 }
 
+/*button {
+  list-style: none;
+  margin: 0;
+
+  background: deepskyblue;
+
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  -webkit-flex-flow: row wrap;
+  justify-content: flex-end;
+}
+
+button a {
+  -webkit-border-radius: 10;
+  -moz-border-radius: 10;
+  border-radius: 10px;
+  font-family: Arial;
+  color: black;
+  font-size: 20px;
+  background: #ffff4d;
+  padding: 10px 20px 10px 20px;
+  border: solid black 2px;
+  text-decoration: none;
+}
+button a:hover {
+  background: #cc9900;
+  background-image: -webkit-linear-gradient(top, #cc9900);
+  background-image: -moz-linear-gradient(top, #cc9900);
+  background-image: -ms-linear-gradient(top, #cc9900);
+  background-image: -o-linear-gradient(top, #cc9900);
+  background-image: linear-gradient(to bottom, #cc9900);
+  text-decoration: none;
+}*/
 
 .flex-container {
   display: -webkit-flex;
@@ -14,15 +51,16 @@ body {
   justify-content: center;
 }
 
-.flex-login {
+.flex-form {
   border-radius: 10px;
   box-shadow: 5px 5px 5px #333333;
   background: #ffffcc;
-  width: 500px;
+  width: 300px;
+  height: 300px;
+  line-height: 60%;
   margin-top: 10px;
   color: black
-  font-weight: bold;
-  font-size: 3em;
+  font-weight: normal;
   text-align: center;
 }
 
@@ -39,6 +77,67 @@ body {
   text-align: center;
 }
 
+.hidden {
+  display: none;
+}
+
+pre {
+  margin-top: 5px;
+  font-weight: normal;;
+  font-size: 3em;
+  text-align: center
+}
+
 ul {
   list-style-type: none;
+}
+
+.navigation {
+  list-style: none;
+  margin: 0;
+  background: #e6ac00;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  justify-content: flex-end;
+}
+
+.navigation a {
+  text-decoration: none;
+  display: block;
+  padding: 1em;
+  color: white;
+}
+
+.navigation a:hover {
+  background: darken(#cc9900, 2%);
+}
+
+@media all and (max-width: 800px) {
+  .navigation {
+    justify-content: space-around;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .navigation {
+    -webkit-flex-flow: column wrap;
+    flex-flow: column wrap;
+    padding: 0;
+  }
+
+  .navigation a {
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid rgba(255,255,255,0.3);
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+  }
+
+
+  .navigation li:last-of-type a {
+    border-bottom: none;
+  }
 }
