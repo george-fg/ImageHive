@@ -2,23 +2,7 @@ body {
   background-color:  #ffff4d;
 }
 
-/*button {
-  list-style: none;
-  margin: 0;
-
-  background: deepskyblue;
-
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-
-  -webkit-flex-flow: row wrap;
-  justify-content: flex-end;
-}
-
-button a {
+button {
   -webkit-border-radius: 10;
   -moz-border-radius: 10;
   border-radius: 10px;
@@ -30,7 +14,7 @@ button a {
   border: solid black 2px;
   text-decoration: none;
 }
-button a:hover {
+button:hover {
   background: #cc9900;
   background-image: -webkit-linear-gradient(top, #cc9900);
   background-image: -moz-linear-gradient(top, #cc9900);
@@ -38,7 +22,7 @@ button a:hover {
   background-image: -o-linear-gradient(top, #cc9900);
   background-image: linear-gradient(to bottom, #cc9900);
   text-decoration: none;
-}*/
+}
 
 .flex-container {
   display: -webkit-flex;
@@ -56,7 +40,20 @@ button a:hover {
   box-shadow: 5px 5px 5px #333333;
   background: #ffffcc;
   width: 300px;
-  height: 300px;
+  height: 200px;
+  line-height: 60%;
+  margin-top: 10px;
+  color: black
+  font-weight: normal;
+  text-align: center;
+}
+
+.flex-login {
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px #333333;
+  background: #ffffcc;
+  width: 300px;
+  height: 100px;
   line-height: 60%;
   margin-top: 10px;
   color: black

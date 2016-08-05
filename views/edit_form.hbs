@@ -1,14 +1,15 @@
 <div class="flex-container">
-  <h1>{{title}}</h1>
-  <p>Change your image!</p>
-  <form class="flex-login" id="new_post" action="/post/{{id}}" accept-charset="UTF-8" method="post">
+  <a href="/"><img src="../../images/Bee_Logo.png" width=auto height="300px"></a>
+  <p></p>
+  <form class="flex-form" id="new_post" action="/post" accept-charset="UTF-8" method="post">
   <p>
-    <input type="text" name="username" id="cat_image" value={{users_username}} readonly/><br><br>
+    Edit your image and caption:<br><br>
+    <input class="hidden" type="text" name="username" id="cat_image" value={{users_username}} readonly/><br><br>
+    Image:<br><br>
     <input placeholder="image url" type="text" name="image" id="cat_image" value={{imgUrl}}/><br><br>
-    <textarea placeholder="caption" name="caption" id="image_caption">
-      {{caption}}
-    </textarea><br><br>
-    <input type="submit" name="commit" value="Edit Post" />
+    Caption:<br><br>
+    <textarea placeholder="caption" name="caption" id="image_caption">{{caption}}</textarea><br><br>
+    <input type="submit" name="commit" value="Update Post" />
   </p>
   </form>
 </div>
