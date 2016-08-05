@@ -3,9 +3,8 @@ $(document).ready(function() {
 });
 
 function deleteButton(event) {
-  var size = event.target.baseURI.length -1;
-  var id = event.target.baseURI.charAt(size);
-
+  var urlArr = event.target.baseURI.split('/');
+  var id = urlArr[urlArr.length - 1];
   $.ajax({
     url: '/post/'+ id,
     type: 'DELETE',
