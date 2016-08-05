@@ -18,6 +18,10 @@ function getPosts() {
   return knex('posts')
 }
 
+function getPostById(id){
+  return knex('posts').where('id', id)
+}
+
 function logError(err) {
   console.error(err.message);
   res.status(500).send("Can't display cats!");
@@ -29,5 +33,6 @@ module.exports = {
   insertUser: insertUser,
   logError: logError,
   insertPost: insertPost,
-  getPosts: getPosts
+  getPosts: getPosts,
+  getPostById: getPostById
 };

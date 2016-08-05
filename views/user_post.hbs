@@ -1,10 +1,16 @@
+<ul class="navigation">
+  <li><a href="/users/{{username}}">Your Posts</a></li>
+  <li><a href="/post/{{username}}">New Post</a></li>
+  <li><a href="/users/{{username}}/feed">All Posts</a></li>
+  <li><a href="/">Log Out</a></li>
+</ul>
 <div class="flex-container">
 <img src="../images/Bee_Logo.png" width=auto height="300px">
 <p>Welcome to User Page</p>
   <ul class="flex-posts">
-    <li>#{{id}}</li>
+    <li><a href="/post/{{id}}">#{{id}}</a></li>
     <li><b>{{users_username}}</b></li>
-    <li><img src={{imageUrl}} alt="some_text" style="width:300px;height:300px;"></li>
+    <li><img src='{{imgUrl}}' style="width:300px;height:300px;"></li>
     <li>{{caption}}</li>
   </ul>
 </div>
